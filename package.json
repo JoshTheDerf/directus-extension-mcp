@@ -1,0 +1,63 @@
+{
+  "name": "directus-extension-mcp",
+  "description": "A Directus extension that provides MCP (Model Context Protocol) server functionality with HTTP streaming support, allowing any MCP client to connect to your Directus instance",
+  "icon": "extension",
+  "version": "1.0.0",
+  "author": {
+    "name": "JoshTheDerf",
+    "url": "https://github.com/JoshTheDerf"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshTheDerf/directus-extension-mcp.git"
+  },
+  "homepage": "https://github.com/JoshTheDerf/directus-extension-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/JoshTheDerf/directus-extension-mcp/issues"
+  },
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-endpoint",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "llm",
+    "claude",
+    "anthropic"
+  ],
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "endpoint",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link",
+    "validate": "directus-extension validate"
+  },
+  "dependencies": {
+    "@directus/sdk": "19.1.0",
+    "@modelcontextprotocol/sdk": "1.10.2",
+    "dotenv": "16.5.0",
+    "isomorphic-dompurify": "^2.24.0",
+    "marked": "^15.0.11",
+    "zod": "4.0.0-beta.20250424T163858"
+  },
+  "devDependencies": {
+    "@directus/extensions-sdk": "13.1.1",
+    "@directus/eslint-config": "^0.1.0",
+    "@directus/tsconfig": "3.0.0",
+    "@directus/types": "^13.1.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.25.1",
+    "typescript": "5.8.3"
+  }
+}
